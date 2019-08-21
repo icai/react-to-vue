@@ -1,5 +1,6 @@
 var fs = require('fs')
 var chalk = require('chalk')
+var saveComponent = require('./save')
 var transform = require('./transform')
 
 module.exports = function (src, options) {
@@ -7,9 +8,7 @@ module.exports = function (src, options) {
   let fileContent = fs.readFileSync(src)
   fileContent = fileContent.toString()
 
-
-  let output =  transform(fileContent);
-  
+  let [output, result] = transform(fileContent, options);
   // save file
   saveComponent(options.output, output)
   

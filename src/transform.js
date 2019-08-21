@@ -18,7 +18,7 @@ module.exports = function transform (fileContent, options) {
   // parse module
   let ast = babylon.parse(fileContent, {
     sourceType:'module',
-    plugins: ["typescript", "classProperties", "jsx", "trailingFunctionCommas", "asyncFunctions", "exponentiationOperator", "asyncGenerators", "objectRestSpread", "decorators"]
+    plugins: ["typescript", "classProperties", "jsx", "trailingFunctionCommas", "asyncFunctions", "exponentiationOperator", "asyncGenerators", "objectRestSpread", "decorators-legacy"]
   })
   if (options.ts) {
     transformTS(ast)
@@ -113,5 +113,5 @@ module.exports = function transform (fileContent, options) {
   // generate vue component according to object
   let output = generateVueComponent(result)
 
-  return output;
+  return [output, result];
 }
