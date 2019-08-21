@@ -1,4 +1,4 @@
-var format = require("prettier-eslint");
+
 var babelTraverse = require('@babel/traverse').default
 var {transformComponentName} = require('./utility')
 
@@ -141,23 +141,6 @@ module.exports = function generateVueComponent (object) {
     content += vueProps.join(',\n') + '}'
   }
   
-  // format content
-  const options = {
-    text: content,
-    eslintConfig: {
-      parser: 'babel-eslint',
-      rules: {
-        semi: ["error", "never"],
-        quotes: ["error", "single"],
-        "no-extra-semi": 2,
-        "max-len": ["error", { "code": 150 }],
-        "object-curly-spacing": ["error", "never"],
-        "space-before-function-paren": ["error", "always"],
-        "no-multiple-empty-lines": ["error", { "max": 0}],
-        "line-comment-position": ["error", { "position": "beside" }]
-      }
-    }
-  };
-  content = format(options);
+
   return content
 }
