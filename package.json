@@ -1,6 +1,6 @@
 {
-  "name": "react-to-vue",
-  "version": "1.0.11",
+  "name": "@w3cub/react-to-vue",
+  "version": "1.1.0",
   "description": "engine that transforms React component to Vue component",
   "scripts": {
     "prepublish": "npm run start",
@@ -11,6 +11,7 @@
   "bin": {
     "rtv": "bin/rtv"
   },
+  "main": "src/transform",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/vicwang163/react-to-vue.git"
@@ -27,17 +28,19 @@
   },
   "homepage": "https://github.com/vicwang163/react-to-vue#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
   },
   "dependencies": {
-    "babel-eslint": "^8.1.2",
-    "babel-generator": "^7.0.0-beta.3",
-    "babel-traverse": "^7.0.0-beta.3",
-    "babylon": "^7.0.0-beta.3",
-    "chalk": "^2.3.0",
-    "commander": "^2.13.0",
-    "flow-remove-types": "^1.2.3",
-    "prettier-eslint": "^8.7.0"
+    "@babel/core": "^7.5.5",
+    "@babel/generator": "^7.5.5",
+    "@babel/parser": "^7.5.5",
+    "@babel/traverse": "^7.5.5",
+    "@babel/types": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.0",
+    "flow-remove-types": "^2.105.2",
+    "prettier-eslint": "^9.0.0"
   }
 }
