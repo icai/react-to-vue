@@ -11,7 +11,7 @@
   "bin": {
     "rtv": "bin/rtv"
   },
-  "main": "src/transform",
+  "main": "lib/transform",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/vicwang163/react-to-vue.git"
